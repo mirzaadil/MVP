@@ -23,6 +23,9 @@ public class Injection {
     private static Retrofit retrofitInstance;
 
 
+    public static NewsRepository provideUserRepo() {
+        return new NewsRepositoryImpl(provideNYTimesRestService());
+    }
 
     static ServicesInterface provideNYTimesRestService() {
         if (nyTimesRestService == null) {

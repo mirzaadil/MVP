@@ -19,7 +19,8 @@ import maf.adil.mirza.maf.R;
 
 
 /**
- * Created by Mirza Adil on 9/09/2018.
+ * @author Mirza Adil
+ * @date 2109-01-12
  * <p>
  * This class provides utility functions.
  */
