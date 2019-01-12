@@ -54,6 +54,11 @@ dependencies {
     testCompile("org.powermock:powermock-api-mockito:1.6.2")
     testCompile 'com.squareup.okhttp3:mockwebserver:3.4.0-RC1'
 
+    //Fresco for Image Manager.
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.0-RC1'
+    implementation 'com.facebook.fresco:fresco:1.9.0'
+
+
     //Dependencies for Espresso
     androidTestCompile 'com.android.support:appcompat-v7:28.0.0'
 

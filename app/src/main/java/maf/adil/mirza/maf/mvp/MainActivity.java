@@ -1,7 +1,9 @@
-package maf.adil.mirza.maf;
+package maf.adil.mirza.maf.mvp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import maf.adil.mirza.maf.R;
 
 public class MainActivity extends AppCompatActivity {
 
