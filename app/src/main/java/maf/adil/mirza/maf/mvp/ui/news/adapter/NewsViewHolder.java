@@ -24,6 +24,7 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
     public TextView textView_Date;
     public LinearLayout linearLayoutContainer;
 
+
     public NewsViewHolder(View itemView) {
         super(itemView);
 
@@ -34,12 +35,17 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
         textView_Date = itemView.findViewById(R.id.textviewDate);
         linearLayoutContainer = itemView.findViewById(R.id.ll_container);
 
+
+
         linearLayoutContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //   clickListener.launchIntent(data.get(getAdapterPosition()).getTitle());
+         //       clickListener.launchIntent(itemView.getTag(this));
+
             }
         });
+
+
     }
 
     public void ImageView(String url, final int position, NewsViewHolder holder) {

@@ -1,9 +1,12 @@
 package maf.adil.mirza.maf.mvp.ui.news.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -19,10 +22,7 @@ public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsViewHolder
     private NewsRecyclerViewAdapter.ClickListener clickListener;
 
 
-    public NewsRecyclerViewAdapter(ClickListener clickListener) {
-        this.clickListener = clickListener;
-        data = new ArrayList<>();
-    }
+
 
     public NewsRecyclerViewAdapter(Context context, List<ArticlesItem> data) {
         this.context = context;
@@ -38,8 +38,8 @@ public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsViewHolder
     public void onBindViewHolder(NewsViewHolder holder, int position) {
         holder.textViewAbstract.setText(data.get(position).getSource().getName());
         holder.textView_ByLine.setText(data.get(position).getTitle());
-        holder.textView_Soruce.setText(data.get(position).getPublishedAt());
-        holder.textView_Date.setText(data.get(position).getContent());
+        holder.textView_Soruce.setText(data.get(position).getAuthor());
+        holder.textView_Date.setText(data.get(position).getPublishedAt());
         holder.ImageView(data.get(position).getUrlToImage(), position, holder);
 
     }

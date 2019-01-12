@@ -70,7 +70,7 @@
                         android:id="@+id/textview_abstract"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:lines="2"
+                        android:lines="1"
                         android:textColor="@android:color/black"
                         android:textSize="12sp" />
 

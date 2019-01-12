@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +55,8 @@ public class MainActivity extends AppCompatActivity implements NewsContract.View
     newsResponses =popularNewsList.getArticles();
         System.out.println(newsResponses);
         newsRecyclerViewAdapter.setItems(newsResponses);
+
+
     }
 
 
@@ -118,5 +121,7 @@ public class MainActivity extends AppCompatActivity implements NewsContract.View
         newsRecyclerViewAdapter = new NewsRecyclerViewAdapter(this, null);
         recyclerViewUsers.setAdapter(newsRecyclerViewAdapter);
         presenter.loadData();
+
+
     }
 }
