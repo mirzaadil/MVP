@@ -2,6 +2,8 @@ package maf.adil.mirza.maf.mvp.contract;
 
 
 
+import java.util.List;
+
 import maf.adil.mirza.maf.mvp.presenter.MvpPresenter;
 import maf.adil.mirza.maf.mvp.presenter.MvpView;
 import maf.adil.mirza.maf.repository.model.NewsResponse;
