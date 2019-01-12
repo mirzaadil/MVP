@@ -1,4 +1,4 @@
-package maf.adil.mirza.maf.mvp;
+package maf.adil.mirza.maf.mvp.ui.news.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
