@@ -15,6 +15,9 @@ public class NewsResponse{
 	@SerializedName("status")
 	private String status;
 
+	public NewsResponse(String ok, int i, List<ArticlesItem> articlesItems) {
+	}
+
 	public void setTotalResults(int totalResults){
 		this.totalResults = totalResults;
 	}

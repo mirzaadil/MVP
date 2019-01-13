@@ -5,6 +5,16 @@ import com.google.gson.annotations.SerializedName;
 
 
 public class ArticlesItem{
+	public ArticlesItem(String publishedAt, String author, String urlToImage, String description, Source source, String title, String url, String content) {
+		this.publishedAt = publishedAt;
+		this.author = author;
+		this.urlToImage = urlToImage;
+		this.description = description;
+		this.source = source;
+		this.title = title;
+		this.url = url;
+		this.content = content;
+	}
 
 	@SerializedName("publishedAt")
 	private String publishedAt;
