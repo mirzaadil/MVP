@@ -19,6 +19,11 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.assertThat;
 
+/**
+ * @author Mirza Adil
+ * @date 2019-01-13
+ * This class create for instrument testing.
+ */
 
 public class NewsActivity {
 
@@ -32,7 +37,6 @@ public ActivityTestRule<MainActivity> activityTestRule=new ActivityTestRule<>(Ma
         assertThat(viewById, notNullValue());
         assertThat(viewById, Matchers.<View>instanceOf(RecyclerView.class));
     }
-
 
 
     @Test

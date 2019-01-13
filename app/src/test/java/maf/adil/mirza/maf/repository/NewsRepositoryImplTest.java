@@ -19,9 +19,14 @@ import retrofit2.adapter.rxjava.HttpException;
 import rx.Observable;
 import rx.observers.TestSubscriber;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+
+/**
+ * @author Mirza Adil
+ * @date 2019-01-13
+ * This class create for Unit testing.
+ */
 
 public class NewsRepositoryImplTest {
     @Mock
@@ -30,7 +35,7 @@ public class NewsRepositoryImplTest {
     private NewsRepository newsRepository;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         MockitoAnnotations.initMocks(this);
         newsRepository = new NewsRepositoryImpl(newsRestService);
     }
@@ -66,7 +71,7 @@ public class NewsRepositoryImplTest {
     }
 
     private NewsResponse getNewsList() {
-        List<ArticlesItem> articlesItems = new ArrayList<ArticlesItem>();
+        List<ArticlesItem> articlesItems = new ArrayList<>();
         articlesItems.add(news1FullDetails());
         //  PopularNewsResponse popularNewsResponse  = new PopularNewsResponse("OK","Copyright (c) 2018 The New York Times Company. All Rights Reserved.",1704,popularNews);
 

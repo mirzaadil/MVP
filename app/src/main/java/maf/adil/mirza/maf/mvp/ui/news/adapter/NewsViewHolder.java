@@ -25,7 +25,7 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
     public LinearLayout linearLayoutContainer;
 
 
-    public NewsViewHolder(View itemView) {
+    NewsViewHolder(View itemView) {
         super(itemView);
 
         textViewAbstract = itemView.findViewById(R.id.textview_abstract);
@@ -35,20 +35,9 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
         textView_Date = itemView.findViewById(R.id.textviewDate);
         linearLayoutContainer = itemView.findViewById(R.id.ll_container);
 
-
-
-        linearLayoutContainer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-         //       clickListener.launchIntent(itemView.getTag(this));
-
-            }
-        });
-
-
     }
 
-    public void ImageView(String url, final int position, NewsViewHolder holder) {
+    public void ImageView(String url,NewsViewHolder holder) {
 
 
             if (!TextUtils.isEmpty(url)) {

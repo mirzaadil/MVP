@@ -37,7 +37,7 @@
                     android:layout_height="60dp"
                     android:layout_centerInParent="true"
                     android:padding="5dp"
-                    fresco:placeholderImage="@drawable/photo_female_3"
+                    fresco:placeholderImage="@drawable/placeholderImage"
                     fresco:placeholderImageScaleType="centerCrop"
                     fresco:roundAsCircle="true"
                     fresco:roundBottomEnd="false"
@@ -144,7 +144,6 @@
                 android:layout_weight="0.20">
 
                 <ImageView
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"

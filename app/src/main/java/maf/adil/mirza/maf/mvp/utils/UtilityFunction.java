@@ -1,4 +1,4 @@
-package maf.adil.mirza.maf.repository;
+package maf.adil.mirza.maf.mvp.utils;
 
 import android.app.Application;
 import android.app.ProgressDialog;

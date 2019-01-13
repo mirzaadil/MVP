@@ -3,7 +3,6 @@ package maf.adil.mirza.maf.presenter;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.io.IOException;
@@ -25,16 +24,25 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.powermock.api.mockito.PowerMockito.when;
 
+
+/**
+ * @author Mirza Adil
+ * @date 2019-01-13
+ * This class create for Unit testing.
+ */
+
 public class MainPresenterTest {
     @Mock
+    private
     NewsRepository userRepository;
     @Mock
+    private
     NewsContract.View view;
 
-    NewsPresenter userSearchPresenter;
+    private NewsPresenter userSearchPresenter;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
 
         MockitoAnnotations.initMocks(this);
         userSearchPresenter = new NewsPresenter(userRepository, Schedulers.immediate(), Schedulers.immediate());
@@ -44,7 +52,7 @@ public class MainPresenterTest {
     @Test
     public void ensureNewsApiReturnsResults() {
         NewsResponse newsResponse = getNewsList();
-        when(userRepository.getPopularNews()).thenReturn(Observable.<NewsResponse>just(newsResponse));
+        when(userRepository.getPopularNews()).thenReturn(Observable.just(newsResponse));
         userSearchPresenter.loadData();
         verify(view).showLoading();
         verify(view).hideLoading();
@@ -71,7 +79,7 @@ public class MainPresenterTest {
     }
 
     private NewsResponse getNewsList() {
-        List<ArticlesItem> articlesItems = new ArrayList<ArticlesItem>();
+        List<ArticlesItem> articlesItems = new ArrayList<>();
         articlesItems.add(news1FullDetails());
         //  PopularNewsResponse popularNewsResponse  = new PopularNewsResponse("OK","Copyright (c) 2018 The New York Times Company. All Rights Reserved.",1704,popularNews);
 
