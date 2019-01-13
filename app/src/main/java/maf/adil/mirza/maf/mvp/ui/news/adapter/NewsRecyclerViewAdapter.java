@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import maf.adil.mirza.maf.R;
+import maf.adil.mirza.maf.mvp.ui.news.activity.MainActivity;
 import maf.adil.mirza.maf.repository.model.ArticlesItem;
 
 
