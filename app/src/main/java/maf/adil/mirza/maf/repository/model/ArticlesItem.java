@@ -1,10 +1,13 @@
 package maf.adil.mirza.maf.repository.model;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
 
-public class ArticlesItem{
+public class ArticlesItem implements Parcelable{
 	public ArticlesItem(String publishedAt, String author, String urlToImage, String description, Source source, String title, String url, String content) {
 		this.publishedAt = publishedAt;
 		this.author = author;
@@ -118,4 +121,14 @@ public class ArticlesItem{
 			",content = '" + content + '\'' + 
 			"}";
 		}
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel parcel, int i) {
+
+	}
 }

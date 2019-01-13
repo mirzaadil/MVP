@@ -1,10 +1,13 @@
 package maf.adil.mirza.maf.repository.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
 
-public class NewsResponse{
+public class NewsResponse implements Parcelable{
 
 	@SerializedName("totalResults")
 	private int totalResults;
@@ -51,4 +54,14 @@ public class NewsResponse{
 			",status = '" + status + '\'' + 
 			"}";
 		}
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel parcel, int i) {
+
+	}
 }

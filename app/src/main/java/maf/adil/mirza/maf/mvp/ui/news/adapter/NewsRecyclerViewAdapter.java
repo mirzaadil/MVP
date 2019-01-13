@@ -2,6 +2,9 @@ package maf.adil.mirza.maf.mvp.ui.news.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.os.Parcelable;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +50,13 @@ public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsViewHolder
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context,NewsDetailActivity.class);
-           //       intent.putParcelableArrayListExtra("User_obj",data.get(position));
+                Bundle bundle = new Bundle();
+
+                bundle.putString("News_Image", data.get(position).getUrlToImage());
+                bundle.putString("News_title", data.get(position).getTitle());
+                bundle.putString("News_date", data.get(position).getPublishedAt());
+                bundle.putString("News_content", data.get(position).getContent());
+                intent.putExtras(bundle);
                 context.startActivity(intent);
             }
         });
