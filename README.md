@@ -1,5 +1,4 @@
-# MAF-Assignment
-
+# MVP Architecture
 
 
 # Libraries Used
